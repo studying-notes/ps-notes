@@ -21,9 +21,6 @@ Set-Theme robbyrussell
 #------------------------------- Import Modules END   -------------------------------
 
 
-
-
-
 #-------------------------------  Set Hot-keys BEGIN  -------------------------------
 # 设置 Tab 键补全
 Set-PSReadlineKeyHandler -Key "Tab" -Function Complete
@@ -49,12 +46,10 @@ Set-PSReadLineKeyHandler -Key "Ctrl+f" -Function ForwardWord
 #-------------------------------  Set Hot-keys END    -------------------------------
 
 
-
-
-
 #-------------------------------    Functions BEGIN   -------------------------------
 # Python 直接执行
 $env:PATHEXT += ";.py"
+Set-Alias -Name py -Value python
 
 # 更新 pip 的方法
 function Update-Packages {
@@ -67,29 +62,31 @@ function Update-Packages {
         pip install -U $tmp
     }
 }
+
+# 更新系统 os-update
+Set-Alias -Name os-update -Value Update-Packages
 #-------------------------------    Functions END     -------------------------------
 
 
-
-
-
-#-------------------------------   Set Alias Begin    -------------------------------
+#-------------------------------   Set Alias BEGIN     -------------------------------
 # 编译函数 make
 function MakeThings {
     nmake.exe $args -nologo
 }
 Set-Alias -Name make -Value MakeThings
 
-# 更新系统 os-update
-Set-Alias -Name os-update -Value Update-Packages
-
 # 查看目录 ls & ll
 function ListDirectory {
     (Get-ChildItem).Name
     Write-Host("")
 }
-
 Set-Alias -Name ls -Value ListDirectory
-Set-Alias -Name py -Value python
 Set-Alias -Name ll -Value Get-ChildItem
+
+# ffmpeg 默认覆盖文件，不输出标语
+function MFFmpeg { ffmpeg.exe $args -hide_banner -y }
+Set-Alias -Name ffmpeg -Value MFFmpeg
+
+function MFFprobe { ffprobe.exe $args -hide_banner -y }
+Set-Alias -Name ffprobe -Value MFFprobe
 #-------------------------------    Set Alias END     -------------------------------
