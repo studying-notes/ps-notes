@@ -46,35 +46,7 @@ Set-PSReadLineKeyHandler -Key "Ctrl+f" -Function ForwardWord
 #-------------------------------  Set Hot-keys END    -------------------------------
 
 
-#-------------------------------    Functions BEGIN   -------------------------------
-# Python 直接执行
-$env:PATHEXT += ";.py"
-Set-Alias -Name py -Value python
-
-# 更新 pip 的方法
-function Update-Packages {
-    # update pip
-    Write-Host "Update pip" -ForegroundColor Magenta -BackgroundColor Cyan
-    $a = pip list --outdated
-    $num_package = $a.Length - 2
-    for ($i = 0; $i -lt $num_package; $i++) {
-        $tmp = ($a[2 + $i].Split(" "))[0]
-        pip install -U $tmp
-    }
-}
-
-# 更新系统 os-update
-Set-Alias -Name os-update -Value Update-Packages
-#-------------------------------    Functions END     -------------------------------
-
-
 #-------------------------------   Set Alias BEGIN     -------------------------------
-# 编译函数 make
-function MakeThings {
-    nmake.exe $args -nologo
-}
-Set-Alias -Name make -Value MakeThings
-
 # 查看目录 ls & ll
 function ListDirectory {
     (Get-ChildItem).Name
@@ -83,10 +55,13 @@ function ListDirectory {
 Set-Alias -Name ls -Value ListDirectory
 Set-Alias -Name ll -Value Get-ChildItem
 
+# pwd 显示当前目录
+Set-Alias -Name pwd -Value Get-Location
+
 # ffmpeg 默认覆盖文件，不输出标语
 function MFFmpeg { ffmpeg.exe $args -hide_banner -y }
 Set-Alias -Name ffmpeg -Value MFFmpeg
 
-function MFFprobe { ffprobe.exe $args -hide_banner -y }
+function MFFprobe { ffprobe.exe -hide_banner $args }
 Set-Alias -Name ffprobe -Value MFFprobe
 #-------------------------------    Set Alias END     -------------------------------
