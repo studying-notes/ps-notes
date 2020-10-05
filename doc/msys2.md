@@ -1,31 +1,49 @@
-# Windows Terminal 集成 MSYS2
+---
+date: 2020-10-05T18:01:31+08:00  # 创建日期
+author: "Rustle Karl"  # 作者
 
-```
+# 文章
+title: "Windows Terminal 集成 MSYS2"  # 文章标题
+description: "在 Windows Terminal 集成各类终端"
+url:  "posts/2020/10/05/msys2"  # 设置网页链接，默认使用文件名
+tags: [ "windows terminal", "msys2", "config"]  # 自定义标签
+series: [ "终端学习笔记"]  # 文章主题/文章系列
+categories: [ "基础配置"]  # 文章分类
+
+# 章节
+weight: 20 # 文章在章节中的排序优先级，正序排序
+chapter: false  # 将页面设置为章节
+
+index: true  # 文章是否可以被索引
+draft: false  # 草稿
+---
+
+```url
 https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20200903.exe
 ```
 
-## 新建一个 MSYS2 的配置
+## 新建 MSYS2 配置
 
-```json
-        {
-            "guid": "{8fc27f7a-7532-4e48-97cf-7d5df4cc40f0}",
-            "hidden": false,
-            "acrylicOpacity": 0.5,
-            "closeOnExit": true,
-            "commandline": "c:/developer/msys64/msys2_shell.cmd -defterm -no-start -use-full-path -here",
-            // "commandline" : "c:/developer/msys64/msys2_shell.cmd -defterm -no-start -use-full-path -here -mingw64",
-            "cursorColor": "#FD9D4F",
-            "cursorShape": "filledBox",
-            "fontSize": 12,
-            "historySize": 9001,
-            "icon": "c:/developer/msys64/msys2.ico",
-            "name": "MSYS2",
-            "snapOnInput": true,
-            "startingDirectory": "D:/Dropbox/reps",
-            "useAcrylic": true,
-            "fontFace": "Fira Code Medium"
-        },
-```
+{{< code language="json" title="配置示例" id="1" expand="" collapse="" isCollapsed="false" >}}
+{
+    "guid": "{8fc27f7a-7532-4e48-97cf-7d5df4cc40f0}",
+    "hidden": false,
+    "acrylicOpacity": 0.5,
+    "closeOnExit": true,
+    "commandline": "c:/developer/msys64/msys2_shell.cmd -defterm -no-start -use-full-path -here",
+    // "commandline" : "c:/developer/msys64/msys2_shell.cmd -defterm -no-start -use-full-path -here -mingw64",
+    "cursorColor": "#FD9D4F",
+    "cursorShape": "filledBox",
+    "fontSize": 12,
+    "historySize": 9001,
+    "icon": "c:/developer/msys64/msys2.ico",
+    "name": "MSYS2",
+    "snapOnInput": true,
+    "startingDirectory": "D:/Dropbox/reps",
+    "useAcrylic": true,
+    "fontFace": "Fira Code Medium"
+},
+{{< /code >}}
 
 - `-mingw64` 指定启动 mingw64，默认 msys2
 - `-defterm` 表示启动 bash
@@ -103,7 +121,7 @@ Server = http://mirrors.ustc.edu.cn/msys2/msys/$arch
 Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/$arch
 ```
 
-更新系统：
+然后更新系统：
 
 ```shell
 pacman -Syu
@@ -137,16 +155,15 @@ set MSYS=winsymlinks:nativestrict
 
 ```shell
 mkdir -p ~/.zsh/plugins
+```
 
+```shell
 git clone git://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/plugins/zsh-autosuggestions
-
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/plugins/zsh-syntax-highlighting
 ```
 
 设置 `.zshrc` 中的 `$ZSH_CUTOM` 变量
 
 ```ini
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 ZSH_CUSTOM=~/.zsh
+plugins=(git zsh-autosuggestions)
 ```
