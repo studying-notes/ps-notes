@@ -47,6 +47,7 @@ Set-PSReadLineKeyHandler -Key "Ctrl+f" -Function ForwardWord
 
 
 #-------------------------------   Set Alias BEGIN     -------------------------------
+
 # 查看目录 ls & ll
 function ListDirectory {
     (Get-ChildItem).Name
@@ -64,4 +65,12 @@ Set-Alias -Name ffmpeg -Value MFFmpeg
 
 function MFFprobe { ffprobe.exe -hide_banner $args }
 Set-Alias -Name ffprobe -Value MFFprobe
+
+# get git-repo
+function GitClone { git.exe clone $args }
+Set-Alias -Name get -Value GitClone
+
+# hugo new
+function HugoNew { hugo.exe new -s D:\OneDrive\Repositories\notes $args }
+Set-Alias -Name hn -Value HugoNew
 #-------------------------------    Set Alias END     -------------------------------
