@@ -140,6 +140,10 @@ set "LOGINSHELL=zsh"
 ```
 
 ```shell
+./w_ohmyzsh.sh
+```
+
+```shell
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 

@@ -71,6 +71,6 @@ function GitClone { git.exe clone $args }
 Set-Alias -Name get -Value GitClone
 
 # hugo new
-function HugoNew { hugo.exe new -s D:\OneDrive\Repositories\notes $args }
+function HugoNew { hugo.exe new -s E:\OneDrive\Repositories\notes $args }
 Set-Alias -Name hn -Value HugoNew
 #-------------------------------    Set Alias END     -------------------------------

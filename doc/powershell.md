@@ -47,7 +47,7 @@ code $profile
 
 重载配置文件：
 
-```
+```shell
 & $profile
 ```
 

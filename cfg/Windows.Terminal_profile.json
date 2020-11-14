@@ -53,7 +53,7 @@
             "commandline": "C:/Program Files/PowerShell/7/pwsh.exe -nolog",
             "source": "Windows.Terminal.PowershellCore",
             // 启动菜单，让新建标签页在当前目录
-            "startingDirectory": "D:/OneDrive/Repositories",
+            "startingDirectory": "E:/OneDrive/Repositories",
             // 字体
             "fontFace": "Fira Code Medium",
             "fontSize": 11,
@@ -64,27 +64,10 @@
             "useAcrylic": false
         },
         {
-            "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
-            "hidden": false,
-            "name": "Kali Linux",
-            "source": "Windows.Terminal.Wsl",
-            // 启动菜单，让新建标签页在当前目录
-            "startingDirectory": "D:/Dropbox/reps",
-            // 字体及字体大小
-            "fontSize": 11,
-            "fontFace": "Fira Code Medium"
-        },
-        {
             "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-            "hidden": false,
+            "hidden": true,
             "name": "Azure Cloud Shell",
             "source": "Windows.Terminal.Azure"
-        },
-        {
-            "guid": "{914a0d3c-9db4-56f8-a8ac-65f4b7ea8b09}",
-            "hidden": false,
-            "name": "openSUSE-Leap-15.2",
-            "source": "Windows.Terminal.Wsl"
         }
     ],
     // Add custom color schemes to this array
@@ -156,6 +139,10 @@
     // Add any keybinding overrides to this array.
     // To unbind a default keybinding, set the command to "unbound"
     "keybindings": [
+        {
+            "command": "find",
+            "keys": "ctrl+f"
+        },
         {
             "command": "closeTab",
             "keys": [
