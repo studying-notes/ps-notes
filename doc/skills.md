@@ -18,7 +18,36 @@ toc: true  # 是否自动生成目录
 draft: false  # 草稿
 ---
 
-## 设置服务失败不断自启
+## Windows 服务相关
+
+### 服务安装脚本
+
+```cmd
+@echo off
+rem 强制以管理员身份运行
+%1 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %~s0 ::","","runas",1)(window.close)&&exit
+
+cd /d "%~dp0"
+
+%SystemRoot%\Microsoft.NET\Framework\v4.0.30319\installutil.exe XXXX.exe
+
+Net Start XXXX
+
+sc config XXXX start= auto
+```
+
+### 服务卸载脚本
+
+```cmd
+@echo off
+rem 强制以管理员身份运行
+%1 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %~s0 ::","","runas",1)(window.close)&&exit
+cd /d "%~dp0"
+
+%SystemRoot%\Microsoft.NET\Framework\v4.0.30319\installutil.exe /u  XXXX.exe
+```
+
+### 设置服务失败不断自启
 
 程序异常退出会不断重启。
 
@@ -27,7 +56,7 @@ SC failure 服务名 reset= 0 actions= restart/0/restart/0/restart/0
 SC failure AAAAAAAAA reset= 0 actions= restart/0/restart/0/restart/0
 ```
 
-## 删除服务
+### 删除服务
 
 ```shell
 SC delete 服务名
