@@ -18,6 +18,20 @@ index: true  # 文章是否可以被索引
 draft: false  # 草稿
 ---
 
+## 支持 ANSI 颜色显示
+
+### Powershell
+
+```shell
+Set-ItemProperty HKCU:\Console VirtualTerminalLevel -Type DWORD 1
+```
+
+### Cmd
+
+```shell
+reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1
+```
+
 ## 暴力迁移
 
 > 将用户目录下的 Powershell 文件夹复制即可将配置转移。
