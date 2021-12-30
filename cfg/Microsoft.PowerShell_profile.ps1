@@ -15,9 +15,9 @@ Import-Module posh-git
 Import-Module oh-my-posh
 
 # 设置 PowerShell 主题
-Set-PoshPrompt avit
-Set-PoshPrompt paradox
-Set-PoshPrompt robbyrussel
+# Set-Theme Paradox
+# Set-Theme Sorin
+Set-Theme robbyrussell
 #------------------------------- Import Modules END   -------------------------------
 
 
@@ -56,6 +56,8 @@ function ListDirectory {
 Set-Alias -Name ls -Value ListDirectory
 Set-Alias -Name ll -Value Get-ChildItem
 
+Set-Alias -Name py -Value python
+
 # pwd 显示当前目录
 Set-Alias -Name pwd -Value Get-Location
 
@@ -92,4 +94,11 @@ function HugoServer {
     hugo.exe server
 }
 Set-Alias -Name hs -Value HugoServer
+
+# MD5
+function MD5File {
+    certutil -hashfile $args MD5
+}
+Set-Alias -Name md5 -Value MD5File
+
 #-------------------------------    Set Alias END     -------------------------------
