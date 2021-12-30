@@ -101,4 +101,8 @@ function MD5File {
 }
 Set-Alias -Name md5 -Value MD5File
 
+# 启动录音服务
+function RecorderServer { D:\OneDrive\Repositories\projects\edge-tts\RecorderClient\RecorderServer.exe }
+Set-Alias -Name rs -Value RecorderServer
+
 #-------------------------------    Set Alias END     -------------------------------
