@@ -15,9 +15,9 @@ Import-Module posh-git
 Import-Module oh-my-posh
 
 # 设置 PowerShell 主题
-# Set-Theme Paradox
-# Set-Theme Sorin
-Set-Theme robbyrussell
+Set-PoshPrompt avit
+Set-PoshPrompt paradox
+Set-PoshPrompt robbyrussel
 #------------------------------- Import Modules END   -------------------------------
 
 
@@ -70,7 +70,26 @@ Set-Alias -Name ffprobe -Value MFFprobe
 function GitClone { git.exe clone $args }
 Set-Alias -Name get -Value GitClone
 
+# gcmt git commit -m "args"
+function GitCommit { git.exe commit -m $args }
+Set-Alias -Name gcmt -Value GitCommit
+
+# gst git status
+function GitStatus { git.exe status }
+Set-Alias -Name gst -Value GitStatus
+
+# gh git hist
+function GitHistory { git.exe hist }
+Set-Alias -Name gh -Value GitHistory
+
 # hugo new
-function HugoNew { hugo.exe new -s E:\OneDrive\Repositories\notes $args }
+function HugoNew { hugo.exe new -s D:\OneDrive\Repositories\notes $args }
 Set-Alias -Name hn -Value HugoNew
+
+# hugo server
+function HugoServer {
+    cd D:\OneDrive\Repositories\notes
+    hugo.exe server
+}
+Set-Alias -Name hs -Value HugoServer
 #-------------------------------    Set Alias END     -------------------------------
