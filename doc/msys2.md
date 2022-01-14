@@ -5,7 +5,7 @@ author: "Rustle Karl"  # 作者
 # 文章
 title: "Windows Terminal 集成 MSYS2"  # 文章标题
 description: "在 Windows Terminal 集成各类终端"
-url:  "posts/2020/10/05/msys2"  # 设置网页链接，默认使用文件名
+url:  "posts/ps/doc/msys2"  # 设置网页永久链接
 tags: [ "windows terminal", "msys2", "config"]  # 自定义标签
 series: [ "终端学习笔记"]  # 文章主题/文章系列
 categories: [ "基础配置"]  # 文章分类
@@ -20,6 +20,10 @@ draft: false  # 草稿
 
 ```url
 https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20200903.exe
+```
+
+```url
+https://repo.msys2.org/distrib/x86_64/
 ```
 
 ## 新建 MSYS2 配置
@@ -127,6 +131,20 @@ Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/$arch
 pacman -Syu
 ```
 
+## 设置 Fish 为默认 Shell
+
+```shell
+pacman -S fish
+```
+
+### 卸载
+
+```shell
+pacman -R fish
+```
+
+风格不太一样，还是用 ZSH 好。
+
 ## 设置 ZSH 为默认 Shell
 
 ```shell
@@ -144,7 +162,7 @@ set "LOGINSHELL=zsh"
 ```
 
 ```shell
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://gitee.com/fujiawei/ohmyzsh/raw/master/tools/install.sh)"
 ```
 
 ## MSYS2 启用原生链接
@@ -155,19 +173,4 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 set MSYS=winsymlinks:nativestrict
 ```
 
-## ZSH 实现 Fish Shell 的效果
-
-```shell
-mkdir -p ~/.zsh/plugins
-```
-
-```shell
-git clone git://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/plugins/zsh-autosuggestions
-```
-
-设置 `.zshrc` 中的 `$ZSH_CUTOM` 变量
-
-```ini
-ZSH_CUSTOM=~/.zsh
-plugins=(git zsh-autosuggestions)
-```
+{{<link src="posts/ps/doc/ohmyzsh">}}

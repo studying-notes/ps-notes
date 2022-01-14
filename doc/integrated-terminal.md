@@ -30,7 +30,7 @@ toc: true  # 是否自动生成目录
             "commandline": "c:/program files/git/bin/bash.exe",
             "icon": "c:/program files/git/logo.png",
             // 启动菜单，让新建标签页在当前目录
-            "startingDirectory": "D:/Dropbox/reps",
+            "startingDirectory": "E:/OneDrive/Repositories",
             // 字体及字体大小
             "fontSize": 11,
             "fontFace": "Fira Code Medium"

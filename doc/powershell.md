@@ -18,6 +18,28 @@ index: true  # 文章是否可以被索引
 draft: false  # 草稿
 ---
 
+## 安装 Chocolatey
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))  
+```
+
+```powershell
+choco install curl nodejs wget cmake chocolateygui -y
+```
+
+```powershell
+refreshenv
+```
+
+```powershell
+choco install curl wget chocolateygui -y
+```
+
+```powershell
+choco install -y redis
+```
+
 ## 支持 ANSI 颜色显示
 
 ### Powershell
@@ -48,6 +70,12 @@ Install-Module posh-git -Scope CurrentUser
 # 安装 oh-my-posh 包，让你的命令行更酷炫、优雅
 Install-Module oh-my-posh -Scope CurrentUser
 ```
+
+## 主题
+
+Get-PoshThemes
+
+列出全部主题
 
 ## 配置文件
 

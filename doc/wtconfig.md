@@ -18,9 +18,17 @@ index: true  # 文章是否可以被索引
 draft: false  # 草稿
 ---
 
+## 分栏的打开和关闭快捷键
+
+左右分屏：Alt+Shift+=
+
+上下分屏：Alt+Shift+-
+
+取消分屏：Ctrl+Shift+w
+
 ## 在当前文件夹下打开 WT
 
-以**管理员身份**启动 PowerShell 7 控制台，然后运行目录下的 `install.ps1` 脚本。
+以**管理员身份**启动 **PowerShell 7** 控制台，然后运行 `reg` 目录下的 `install.ps1` 脚本。
 
 > 如果只运行 `install.ps1` 而不加参数，那么菜单项将以 `Mini` 布局组织，其他布局（ `Default` 和 `Flat`）具有不同的外观，要应用其他布局，只需运行 `install.ps1 Flat`。
 
