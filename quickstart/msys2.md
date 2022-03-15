@@ -133,28 +133,37 @@ pacman -Syu
 pacman -S fish
 ```
 
-```shell
-pacman -S vim
-```
-
 ### 卸载
 
 ```shell
 pacman -R fish
 ```
 
-风格不太一样，还是用 ZSH 好。
+```shell
+curl -x localhost:8118 https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+```
+
+```shell
+omf install eclm
+omf theme eclm
+```
+
+https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md
 
 ## 设置 ZSH 为默认 Shell
 
 ```shell
-pacman -S zsh
+pacman -Sy zsh
+```
+
+```shell
+pacman -R zsh
 ```
 
 由于 MSYS2 指定 MSYSCON 为 defterm 时默认是执行 `bash`，我们简单地把 `msys2_shell.cmd` 第 5 行的 `bash` 改成 `zsh` 即可：
 
 ```shell
-set "LOGINSHELL=zsh"
+set "LOGINSHELL=fish"
 ```
 
 ```shell
@@ -167,4 +176,10 @@ sh -c "$(curl -fsSL https://gitee.com/fujiawei/ohmyzsh/raw/master/tools/install.
 
 ```
 set MSYS=winsymlinks:nativestrict
+```
+
+## MinGW Toolchain
+
+```
+pacman -S --needed base-devel mingw-w64-x86_64-toolchain
 ```
