@@ -178,6 +178,14 @@ sh -c "$(curl -fsSL https://gitee.com/fujiawei/ohmyzsh/raw/master/tools/install.
 set MSYS=winsymlinks:nativestrict
 ```
 
+### 创建用户目录链接
+
+```
+rm /home/Admin
+
+ln -s /c/Users/Admin /home
+```
+
 ## MinGW Toolchain
 
 ```
