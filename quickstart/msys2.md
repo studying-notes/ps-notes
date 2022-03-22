@@ -19,7 +19,7 @@ draft: false  # 草稿
 ---
 
 ```shell
-choco install msys2
+choco install --force msys2
 ```
 
 ## 新建 MSYS2 配置
@@ -39,7 +39,7 @@ choco install msys2
     "icon": "c:/tools/msys64/msys2.ico",
     "name": "MSYS2",
     "snapOnInput": true,
-    "startingDirectory": "D:/OneDrive/Repositories/projects",
+    "startingDirectory": "C:/Users/Admin",
     "useAcrylic": true,
     "fontFace": "Fira Code Medium"
 },
@@ -127,6 +127,32 @@ Server = http://mirror.bit.edu.cn/msys2/REPOS/MSYS2/$arch
 pacman -Syu
 ```
 
+## MSYS2 启用原生链接
+
+code C:\tools\msys64
+
+同样，编辑 `msys2_shell.cmd`，找到 `rem To activate windows native symlinks uncomment next line `这一行， 即去掉 `set MSYS=winsymlinks:nativestrict` 前面的 `rem` 注释：
+
+```
+set MSYS=winsymlinks:nativestrict
+```
+
+### 创建用户目录链接
+
+```
+rm -rf /home/Admin
+
+ln -s /c/Users/Admin /home
+```
+
+## MinGW Toolchain
+
+```
+pacman -S --needed git base-devel mingw-w64-x86_64-toolchain
+```
+
+非原生 Shell 总有一种卡顿的感觉。
+
 ## 设置 Fish 为默认 Shell
 
 ```shell
@@ -140,7 +166,11 @@ pacman -R fish
 ```
 
 ```shell
+git config --global http.https://github.com.proxy http://127.0.0.1:8118
+
 curl -x localhost:8118 https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+
+git config --global --unset http.https://github.com.proxy
 ```
 
 ```shell
@@ -168,26 +198,4 @@ set "LOGINSHELL=fish"
 
 ```shell
 sh -c "$(curl -fsSL https://gitee.com/fujiawei/ohmyzsh/raw/master/tools/install.sh)"
-```
-
-## MSYS2 启用原生链接
-
-同样，编辑 `msys2_shell.cmd`，找到 `rem To activate windows native symlinks uncomment next line `这一行， 即去掉 `set MSYS=winsymlinks:nativestrict` 前面的 `rem` 注释：
-
-```
-set MSYS=winsymlinks:nativestrict
-```
-
-### 创建用户目录链接
-
-```
-rm /home/Admin
-
-ln -s /c/Users/Admin /home
-```
-
-## MinGW Toolchain
-
-```
-pacman -S --needed base-devel mingw-w64-x86_64-toolchain
 ```
