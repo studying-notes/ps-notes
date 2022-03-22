@@ -44,6 +44,7 @@ draft: false  # 草稿
 - [在 Windows Terminal 中集成各种终端](quickstart/integrated-terminal.md)
 - [ZSH 实现 Fish Shell 的效果](quickstart/ohmyzsh.md)
 - [Windows Terminal 配置](docs/windows_terminal_config.md)
+- [wmic 命令设置环境变量](docs/cmd/wmic.md)
 
 ### Powershell
 

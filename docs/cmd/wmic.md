@@ -3,7 +3,7 @@ date: 2020-11-21T21:24:34+08:00  # 创建日期
 author: "Rustle Karl"  # 作者
 
 title: "wmic 命令设置环境变量"  # 文章标题
-url:  "posts/ps/abc/wmic"  # 设置网页永久链接
+url:  "posts/ps/docs/cmd/wmic"  # 设置网页永久链接
 tags: [ "powershell", "script"]  # 标签
 series: [ "终端学习笔记"]  # 文章主题/文章系列
 categories: [ "学习笔记"]  # 分类
