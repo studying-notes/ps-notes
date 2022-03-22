@@ -38,10 +38,10 @@ draft: false  # 草稿
 
 ### Windwos
 
-- [设置右键在当前文件夹下打开 WT](reg/README.md)
-- [Windows Terminal 集成 MSYS2](doc/msys2.md)
-- [PowerShell 自定义外观](doc/powershell.md)
+- [Windows Terminal 集成 MSYS2](quickstart/msys2.md)
+- [PowerShell 基本配置](quickstart/powershell.md)
 - [Chocolatey 基本用法](libraries/standard/choco.md)
+- [Windows 启动 OpenSSH 服务](libraries/standard/openssh.md)
 
 ## 基础语法
 
