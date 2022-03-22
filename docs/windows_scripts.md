@@ -3,8 +3,8 @@ date: 2020-10-11T22:23:19+08:00  # 创建日期
 author: "Rustle Karl"  # 作者
 
 # 文章
-title: "Powershll 常用命令"  # 文章标题
-url:  "posts/ps/doc/skill"  # 设置网页永久链接
+title: "PowerShell 常用命令"  # 文章标题
+url:  "posts/ps/docs/windows_scripts"  # 设置网页永久链接
 tags: [ "powershell", "skills"]  # 标签
 series: [ "终端学习笔记"]  # 文章主题/文章系列
 categories: [ "学习笔记"]  # 分类

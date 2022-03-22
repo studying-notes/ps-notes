@@ -39,13 +39,17 @@ draft: false  # 草稿
 ### Windwos
 
 - [Windows Terminal 集成 MSYS2](quickstart/msys2.md)
-- [PowerShell 基本配置](quickstart/powershell.md)
-- [Powershll 常用命令](docs/windows_scripts.md)
 - [Chocolatey 基本用法](libraries/standard/choco.md)
 - [Windows 启动 OpenSSH 服务](libraries/standard/openssh.md)
 - [在 Windows Terminal 中集成各种终端](quickstart/integrated-terminal.md)
 - [ZSH 实现 Fish Shell 的效果](quickstart/ohmyzsh.md)
 - [Windows Terminal 配置](docs/windows_terminal_config.md)
+
+### Powershell
+
+- [PowerShell 基本配置](quickstart/powershell.md)
+- [PowerShell 常用命令](docs/windows_scripts.md)
+- [设置 PowerShell 别名](docs/powershell/alias.md)
 
 ## 基础语法
 
