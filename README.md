@@ -42,6 +42,7 @@ draft: false  # 草稿
 - [PowerShell 基本配置](quickstart/powershell.md)
 - [Chocolatey 基本用法](libraries/standard/choco.md)
 - [Windows 启动 OpenSSH 服务](libraries/standard/openssh.md)
+- [在 Windows Terminal 中集成各种终端](quickstart/integrated-terminal.md)
 
 ## 基础语法
 

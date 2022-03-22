@@ -28,15 +28,11 @@ toc: true  # 是否自动生成目录
             "hidden": false,
             "name": "Git Bash",
             "commandline": "c:/program files/git/bin/bash.exe",
-            "icon": "c:/program files/git/logo.png",
+            "icon": "c:/program files/git/git_logo.png",
             // 启动菜单，让新建标签页在当前目录
-            "startingDirectory": "E:/OneDrive/Repositories",
+            "startingDirectory": "C:/Users/Admin",
             // 字体及字体大小
             "fontSize": 11,
             "fontFace": "Fira Code Medium"
         },
 ```
-
-## MSYS2
-
-{{<link src="posts/ps/doc/msys2">}}
