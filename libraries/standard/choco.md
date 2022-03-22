@@ -61,7 +61,7 @@ choco install potplayer --proxy=http://localhost:8118
 
 choco install -y curl git nodejs pwsh wget chocolateygui chromedriver golang msys2 cmake 7zip iobit-uninstaller jetbrainstoolbox powertoys
 
-choco install -y powertoys
+choco install -y powertoys everything
 
 choco uninstall -y msys2
 
