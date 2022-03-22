@@ -14,6 +14,16 @@ draft: false  # 草稿
 
 Chocolatey 是一款 Windows 软件包管理工具 (可简称为choco)，类似于 macOS 的 [Homebrew](https://mayanote.com/mark/post/homebrew-cheat-sheet)，Ubuntu 的 apt-get。Chocolatey 基于 PowerShell 脚本和 NuGet（微软开发平台的软件包管理器），便于开发者快速安装应用程序和工具，便于开发团队统一开发环境。
 
+- [安装](#安装)
+- [使用](#使用)
+  - [特性配置](#特性配置)
+- [常用软件](#常用软件)
+  - [安装目录](#安装目录)
+  - [网络代理](#网络代理)
+  - [查找软件](#查找软件)
+  - [软件管理](#软件管理)
+- [结束语](#结束语)
+
 ## 安装
 
 首先，使用管理员模式启动 PowerShell。
@@ -36,20 +46,30 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ### 特性配置
 
 ```shell
-choco feature -?
-choco feature list
 choco feature enable -n allowGlobalConfirmation  # 避免每次回答 Y
 choco feature enable -name=exitOnRebootDetected  # 不执行重启检测
+```
+
+## 常用软件
+
+```shell
+choco install -y dart
+choco install -y rust
+choco install -y nginx
+choco install -y msys2
+choco install potplayer --proxy=http://localhost:8118
+
+choco install -y curl git nodejs pwsh wget chocolateygui chromedriver golang msys2 cmake 7zip iobit-uninstaller jetbrainstoolbox
+
+choco uninstall -y msys2
+
+choco upgrade chocolatey  # 升级自身
+choco upgrade all  # 全部升级
 ```
 
 ### 安装目录
 
 ```shell
-# 软件原生安装目录
-C:\Program Files
-C:\Program Files (x86)
-C:\Users\<username>\AppData
-
 # Chocolatey 安装目录
 C:\ProgramData\chocolatey
 
@@ -81,12 +101,6 @@ code C:\ProgramData\chocolatey\config\chocolatey.config
 ```
 
 ### 查找软件
-
-访问软件包官网 https://chocolatey.org/packages
-
-查询软件 7zip 可访问 https://chocolatey.org/packages?q=7zip
-
-或使用 `choco search` 命令查找：
 
 ```shell
 # 查找软件
@@ -125,12 +139,6 @@ choco upgrade all  # 全部升级
 # 卸载软件
 choco uninstall peazip  # 选择 n 保留 peazip.install
 choco uninstall peazip.install  # 卸载 peazip.install
-```
-
-```powershell
-choco install -y curl nodejs wget cmake chocolateygui
-
-choco install -y cmake
 ```
 
 choco 常用命令的缩写形式：
