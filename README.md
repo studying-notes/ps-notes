@@ -40,6 +40,7 @@ draft: false  # 草稿
 
 - [Windows Terminal 集成 MSYS2](quickstart/msys2.md)
 - [PowerShell 基本配置](quickstart/powershell.md)
+- [Powershll 常用命令](docs/windows_scripts.md)
 - [Chocolatey 基本用法](libraries/standard/choco.md)
 - [Windows 启动 OpenSSH 服务](libraries/standard/openssh.md)
 - [在 Windows Terminal 中集成各种终端](quickstart/integrated-terminal.md)
