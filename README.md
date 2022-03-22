@@ -43,6 +43,7 @@ draft: false  # 草稿
 - [Chocolatey 基本用法](libraries/standard/choco.md)
 - [Windows 启动 OpenSSH 服务](libraries/standard/openssh.md)
 - [在 Windows Terminal 中集成各种终端](quickstart/integrated-terminal.md)
+- [ZSH 实现 Fish Shell 的效果](quickstart/ohmyzsh.md)
 
 ## 基础语法
 
