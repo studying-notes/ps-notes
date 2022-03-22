@@ -44,6 +44,7 @@ draft: false  # 草稿
 - [Windows 启动 OpenSSH 服务](libraries/standard/openssh.md)
 - [在 Windows Terminal 中集成各种终端](quickstart/integrated-terminal.md)
 - [ZSH 实现 Fish Shell 的效果](quickstart/ohmyzsh.md)
+- [Windows Terminal 配置](docs/windows_terminal_config.md)
 
 ## 基础语法
 
