@@ -18,6 +18,7 @@ Chocolatey 是一款 Windows 软件包管理工具 (可简称为choco)，类似�
 - [使用](#使用)
   - [特性配置](#特性配置)
 - [常用软件](#常用软件)
+  - [性能测试](#性能测试)
   - [安装目录](#安装目录)
   - [网络代理](#网络代理)
   - [查找软件](#查找软件)
@@ -59,14 +60,26 @@ choco install -y nginx
 choco install -y msys2
 choco install potplayer --proxy=http://localhost:8118
 
-choco install -y curl git nodejs pwsh wget chocolateygui chromedriver golang msys2 cmake 7zip iobit-uninstaller jetbrainstoolbox powertoys
+choco install -y curl git nodejs pwsh wget chocolateygui chromedriver golang msys2 cmake 7zip jetbrainstoolbox powertoys
 
-choco install -y powertoys everything
+choco install -y iobit-uninstaller
+choco install -y iobit-uninstaller # 相对消耗资源
+choco uninstall -y iobit-uninstaller # 相对消耗资源
+choco install -y GeekUninstaller --ignore-checksums # 相对简洁
 
+choco install -y powertoys everything GeekUninstaller
+choco install ninja
+choco install enigmavirtualbox --ignore-checksums
 choco uninstall -y msys2
 
 choco upgrade chocolatey  # 升级自身
 choco upgrade all  # 全部升级
+```
+
+### 性能测试
+
+```
+choco uninstall -y cpu-z gpu-z hwinfo
 ```
 
 ### 安装目录
