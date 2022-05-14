@@ -27,8 +27,7 @@ draft: false  # 草稿
 - `tools`: 常用工具
 - `quickstart`: 基础用法
 - `src`: 源码示例
-  - `src/docs`: 基础语法源码示例
-  - `src/quickstart`: 基础用法源码示例
+  - `src/docs`: 基础配置文件示例
 
 ## 基础用法
 
@@ -36,6 +35,7 @@ draft: false  # 草稿
 - [PowerShell 基本配置](docs/powershell.md)
 - [Zsh 安装与配置](docs/zsh.md)
 - [MSYS2 安装与配置](docs/msys2.md)
+- [WSL2 安装与配置](docs/wsl2.md)
 
 ## 常用工具
 
