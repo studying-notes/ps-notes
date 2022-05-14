@@ -33,13 +33,12 @@ draft: false  # 草稿
 ## 基础用法
 
 - [Windows Terminal 配置](docs/windows_terminal_config.md)
-- [Windows Terminal 集成 MSYS2](quickstart/msys2.md)
-- [Windows 启动 OpenSSH 服务](libraries/standard/openssh.md)
 - [PowerShell 基本配置](docs/powershell.md)
 - [Zsh 安装与配置](docs/zsh.md)
 - [MSYS2 安装与配置](docs/msys2.md)
 
 ## 常用工具
 
+- [Windows 启动 OpenSSH 服务](libraries/standard/openssh.md)
 - [Chocolatey 基本用法](tools/choco.md)
 
