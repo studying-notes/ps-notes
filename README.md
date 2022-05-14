@@ -34,10 +34,10 @@ draft: false  # 草稿
 
 - [Windows Terminal 配置](docs/windows_terminal_config.md)
 - [Windows Terminal 集成 MSYS2](quickstart/msys2.md)
-- [在 Windows Terminal 中集成各种终端](quickstart/integrated-terminal.md)
 - [Windows 启动 OpenSSH 服务](libraries/standard/openssh.md)
 - [PowerShell 基本配置](docs/powershell.md)
 - [Zsh 安装与配置](docs/zsh.md)
+- [MSYS2 安装与配置](docs/msys2.md)
 
 ## 常用工具
 

@@ -3,12 +3,11 @@ date: 2020-10-05T18:01:31+08:00  # 创建日期
 author: "Rustle Karl"  # 作者
 
 # 文章
-title: "Windows Terminal 集成 MSYS2"  # 文章标题
-description: "在 Windows Terminal 集成各类终端"
-url:  "posts/ps/doc/msys2"  # 设置网页永久链接
-tags: [ "windows terminal", "msys2", "config"]  # 自定义标签
-series: [ "终端学习笔记"]  # 文章主题/文章系列
-categories: [ "基础配置"]  # 文章分类
+title: "MSYS2 安装与配置"  # 文章标题
+url:  "posts/ps/docs/msys2"  # 设置网页永久链接
+tags: [ "windows terminal", "msys2", "config" ]  # 自定义标签
+series: [ "终端学习笔记" ]  # 文章主题/文章系列
+categories: [ "基础配置" ]  # 文章分类
 
 # 章节
 weight: 20 # 文章在章节中的排序优先级，正序排序
@@ -21,35 +20,6 @@ draft: false  # 草稿
 ```shell
 choco install --force msys2
 ```
-
-## 新建 MSYS2 配置
-
-```json
-{
-    "guid": "{8fc27f7a-7532-4e48-97cf-7d5df4cc40f0}",
-    "hidden": false,
-    "acrylicOpacity": 0.5,
-    "closeOnExit": true,
-    "commandline": "c:/tools/msys64/msys2_shell.cmd -defterm -no-start -use-full-path -here",
-    // "commandline" : "c:/tools/msys64/msys2_shell.cmd -defterm -no-start -use-full-path -here -mingw64",
-    "cursorColor": "#FD9D4F",
-    "cursorShape": "filledBox",
-    "fontSize": 12,
-    "historySize": 9001,
-    "icon": "c:/tools/msys64/msys2.ico",
-    "name": "MSYS2",
-    "snapOnInput": true,
-    "startingDirectory": "C:/Users/Admin",
-    "useAcrylic": true,
-    "fontFace": "Fira Code Medium"
-},
-```
-
-- `-mingw64` 指定启动 mingw64，默认 msys2
-- `-defterm` 表示启动 bash
-- `-no-start` 表示不通过 `start` 命令来启动，我们的目的是要在 Windows Terminal 里输出
-- `-use-full-path` 或 `set MSYS2_PATH_TYPE = inherit` 表示，我们在 mingw64 下面的时候, PATH 环境变量的值继承自 Windows 系统的环境变量
-- `-here` 就是 `set CHERE_INVOKING = 1`，用于设置默认启动目录参数生效
 
 ## MSYS2 镜像配置
 
