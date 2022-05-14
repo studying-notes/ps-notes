@@ -41,4 +41,5 @@ draft: false  # 草稿
 
 - [Windows 启动 OpenSSH 服务](tools/openssh.md)
 - [Chocolatey 基本用法](tools/choco.md)
+- [Scoop 基本用法](tools/scoop.md)
 
