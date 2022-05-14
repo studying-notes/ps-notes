@@ -3,7 +3,7 @@ date: 2022-03-10T09:12:21+08:00
 author: "Rustle Karl"
 
 title: "Windows 启动 OpenSSH 服务"
-url:  "posts/ps/libraries/standard/openssh"  # 永久链接
+url:  "posts/ps/tools/openssh"  # 永久链接
 tags: [ "Terminal", "README" ]  # 标签
 series: [ "终端学习笔记" ]  # 系列
 categories: [ "学习笔记" ]  # 分类
@@ -47,3 +47,4 @@ if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyCon
     Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
 }
 ```
+邮箱登录的联网账号，用户为邮箱@之前的字符串，密码为账号密码。

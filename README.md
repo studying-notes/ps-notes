@@ -39,6 +39,6 @@ draft: false  # 草稿
 
 ## 常用工具
 
-- [Windows 启动 OpenSSH 服务](libraries/standard/openssh.md)
+- [Windows 启动 OpenSSH 服务](tools/openssh.md)
 - [Chocolatey 基本用法](tools/choco.md)
 
