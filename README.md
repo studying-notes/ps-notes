@@ -34,6 +34,7 @@ draft: false  # 草稿
 - [Windows Terminal 配置](docs/windows_terminal_config.md)
 - [PowerShell 基本配置](docs/powershell.md)
 - [Zsh 安装与配置](docs/zsh.md)
+- [Fish Shell 安装与主题切换](docs/fish.md)
 - [MSYS2 安装与配置](docs/msys2.md)
 - [WSL2 安装与配置](docs/wsl2.md)
 
