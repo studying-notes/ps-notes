@@ -23,6 +23,8 @@ choco install --force msys2
 
 ## MSYS2 镜像配置
 
+> 现在默认已经多个国内镜像了，不必再改。
+
 进入安装目录的 `etc/pacman.d` 修改其中的三个文件：
 
 `mirrorlist.mingw32`

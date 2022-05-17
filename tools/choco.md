@@ -67,17 +67,7 @@ choco upgrade all  # 全部升级
 ### 必备软件
 
 ```shell
-choco install curl git nodejs pwsh wget chocolateygui chromedriver golang msys2 cmake 7zip jetbrainstoolbox powertoys
-
-choco install clash-for-windows
-choco install anaconda
-choco install potplayer iobit-uninstaller everything
-
-choco install logitech-options
-
-cinst docker-desktop
-cinst ffmpeg
-cinst oh-my-posh
+choco install curl git nodejs pwsh wget chocolateygui chromedriver golang msys2 make cmake 7zip jetbrainstoolbox powertoys honeyview ffmpeg oh-my-posh logitech-options clash-for-windows potplayer iobit-uninstaller everything docker-desktop recyclenow nmap rsync
 ```
 
 ### 开发工具
