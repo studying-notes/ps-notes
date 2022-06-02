@@ -18,6 +18,17 @@ index: true  # 文章是否可以被索引
 draft: false  # 草稿
 ---
 
+- [支持 ANSI 颜色显示](#支持-ansi-颜色显示)
+  - [Powershell](#powershell)
+  - [Cmd](#cmd)
+- [暴力迁移](#暴力迁移)
+- [Powershell 插件](#powershell-插件)
+- [oh my posh](#oh-my-posh)
+  - [列出全部主题](#列出全部主题)
+  - [设置主题](#设置主题)
+- [配置文件](#配置文件)
+- [修改启动参数](#修改启动参数)
+
 ## 支持 ANSI 颜色显示
 
 ### Powershell
@@ -44,23 +55,13 @@ Install-Module -Name PSReadLine -AllowPrerelease -Force
 
 # 安装 posh-git 包，让你的 git 更好用
 Install-Module posh-git -Scope CurrentUser
-
-# 安装 oh-my-posh 包，让你的命令行更酷炫、优雅
-Install-Module oh-my-posh -Scope CurrentUser
 ```
 
-## 主题配置
+## oh my posh
 
 https://ohmyposh.dev/docs/windows
 
-貌似没用，还是通过 PS 自带命令安装可行
-
-最新版本已经独立出可执行文件了。。。
-
 ```shell
-# winget
-winget install JanDeDobbeleer.OhMyPosh
-
 # choco
 cinst oh-my-posh poshgit
 cuninst oh-my-posh poshgit
@@ -75,28 +76,22 @@ Get-PoshThemes
 ### 设置主题
 
 ```
-Get-PoshThemes
+cd ~/.config
 ```
-
-不理解作者到底怎么想的，设置个主题搞得很复杂。
 
 ```
 git clone https://github.com/JanDeDobbeleer/oh-my-posh.git
+```
 
-oh-my-posh init pwsh | Invoke-Expression
-
-oh-my-posh init pwsh --config ~/.config/oh-my-posh/themes/1_shell.omp.json | Invoke-Expression
-oh-my-posh init pwsh --config ~/.config/oh-my-posh/themes/avit.omp.json | Invoke-Expression
-oh-my-posh init pwsh --config ~/.config/oh-my-posh/themes/craver.omp.json | Invoke-Expression
-oh-my-posh init pwsh --config ~/.config/oh-my-posh/themes/kali.omp.json | Invoke-Expression
+```
 oh-my-posh init pwsh --config ~/.config/oh-my-posh/themes/robbyrussel.omp.json | Invoke-Expression
+```
 
+```
 . $PROFILE
 ```
 
 ## 配置文件
-
-`cfg/Microsoft.PowerShell_profile.ps1`
 
 打开配置文件：
 

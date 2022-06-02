@@ -86,7 +86,10 @@ choco install -y GeekUninstaller --ignore-checksums # 相对简洁
 
 ### 性能测试
 
-```
+```shell
+# 硬盘测试
+choco install crystaldiskinfo crystaldiskmark
+
 choco install -y cpu-z gpu-z hwinfo
 
 choco uninstall -y cpu-z gpu-z hwinfo

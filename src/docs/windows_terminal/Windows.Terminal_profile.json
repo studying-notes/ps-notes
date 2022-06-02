@@ -1,9 +1,11 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": [
+    "actions": 
+    [
         {
-            "command": {
+            "command": 
+            {
                 "action": "copy",
                 "singleLine": false
             },
@@ -18,7 +20,8 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
@@ -26,7 +29,8 @@
             "keys": "alt+shift+d"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "closeTab"
             },
             "keys": "ctrl+w"
@@ -37,23 +41,29 @@
     "confirmCloseAllTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "multiLinePasteWarning": false,
-    "theme": "dark",
-    "trimBlockSelection": true,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "initialCols": 100,
     "initialRows": 35,
-    "profiles": {
-        "defaults": {
+    "multiLinePasteWarning": false,
+    "profiles": 
+    {
+        "defaults": 
+        {
             "bellStyle": "none",
-            "historySize": 9001,
-            "suppressApplicationTitle": true,
-            "font": {
-                "face": "Fira Code Retina",
+            "closeOnExit": "always",
+            "colorScheme": "Campbell",
+            "cursorShape": "bar",
+            "font": 
+            {
+                "face": "MesloLGM NF",
                 "size": 12
-            }
+            },
+            "historySize": 9001,
+            "startingDirectory": "~",
+            "suppressApplicationTitle": true
         },
-        "list": [
+        "list": 
+        [
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": true,
@@ -61,7 +71,7 @@
             },
             {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
+                "hidden": true,
                 "name": "\u547d\u4ee4\u63d0\u793a\u7b26"
             },
             {
@@ -71,21 +81,67 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
+                "commandline": "C:/Program Files/PowerShell/7/pwsh.exe -nolog",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
-                "commandline": "C:/Program Files/PowerShell/7/pwsh.exe -nolog",
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
+                "commandline": "wsl -d kali-linux",
+                "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
+                "hidden": false,
+                "icon": "D:/OneDrive/Repositories/assets/images/logos/kali_logo.png",
+                "name": "Kali Linux WSL",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "~"
+            },
+            {
+                "commandline": "wsl -d ubuntu",
                 "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
                 "hidden": false,
-                "name": "Ubuntu",
-                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+                "icon": "D:/OneDrive/Repositories/assets/images/logos/ubuntu.png",
+                "name": "Ubuntu WSL",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
+                "startingDirectory": "~",
+                "tabTitle": null
+            },
+            {
+                "commandline": "c:/program files/git/bin/bash.exe",
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b7}",
+                "hidden": false,
+                "icon": "D:/OneDrive/Repositories/assets/images/logos/git_logo.png",
+                "name": "Git Bash"
+            },
+            {
+                "commandline": "c:/tools/msys64/msys2_shell.cmd -defterm -no-start -use-full-path -here",
+                "guid": "{8fc27f7a-7532-4e48-97cf-7d5df4cc40f0}",
+                "hidden": false,
+                "icon": "c:/tools/msys64/msys2.ico",
+                "name": "MSYS2"
+            },
+            {
+                "commandline": "ssh root@openwrt",
+                "guid": "{f2b9174c-bf3d-4822-81a6-be13cfb5e2f2}",
+                "hidden": false,
+                "icon": "D:\\OneDrive\\Repositories\\assets\\images\\logos\\openwrt_logo.png",
+                "name": "OpenWrt SSH",
+                "startingDirectory": "~",
+                "tabTitle": null
+            },
+            {
+                "commandline": "ssh root@ubuntu-amd64",
+                "guid": "{44c83e83-d310-446f-a114-e6abf3c93f8e}",
+                "hidden": false,
+                "icon": "D:/OneDrive/Repositories/assets/images/logos/ubuntu.png",
+                "name": "Ubuntu SSH",
+                "startingDirectory": "~",
+                "tabTitle": null
             }
         ]
     },
-    "schemes": [
+    "schemes": 
+    [
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
@@ -316,5 +372,7 @@
             "white": "#C0C0C0",
             "yellow": "#808000"
         }
-    ]
+    ],
+    "theme": "dark",
+    "trimBlockSelection": true
 }
