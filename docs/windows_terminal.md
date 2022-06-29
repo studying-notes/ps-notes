@@ -2,16 +2,10 @@
 date: 2020-10-05T18:01:31+08:00  # 创建日期
 author: "Rustle Karl"  # 作者
 
-# 文章
-title: "Windows Terminal 配置"  # 文章标题
-url:  "posts/docs/windows_terminal"  # 设置网页链接，默认使用文件名
-tags: [ "windows terminal", "config" ]  # 自定义标签
-series: [ "终端学习笔记" ]  # 文章主题/文章系列
-categories: [ "基础配置" ]  # 文章分类
-
-# 章节
-weight: 20 # 文章在章节中的排序优先级，正序排序
-chapter: false  # 将页面设置为章节
+title: "Windows Terminal 配置"
+url:  "posts/docs/windows_terminal"
+tags: [ "terminal", "config" ]
+categories: [ "终端学习笔记" ]
 
 index: true  # 文章是否可以被索引
 draft: false  # 草稿

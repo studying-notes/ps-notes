@@ -2,16 +2,10 @@
 date: 2021-01-02T09:12:25+08:00  # 创建日期
 author: "Rustle Karl"  # 作者
 
-# 文章
-title: "Zsh 安装与配置"  # 文章标题
-url:  "posts/ps/docs/zsh"  # 设置网页永久链接
-tags: [ "windows terminal", "ohmyzsh" ]  # 自定义标签
-series: [ "终端学习笔记" ]  # 文章主题/文章系列
-categories: [ "基础配置" ]  # 文章分类
-
-# 章节
-weight: 20 # 排序优先级
-chapter: false  # 设置为章节
+title: "Zsh 安装与配置"
+url:  "posts/ps/docs/zsh"
+tags: [ "terminal", "ohmyzsh" ]
+categories: [ "终端学习笔记" ]
 
 index: true  # 是否可以被索引
 toc: true  # 是否自动生成目录

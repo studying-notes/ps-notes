@@ -2,12 +2,10 @@
 date: 2020-10-05T18:01:31+08:00  # 创建日期
 author: "Rustle Karl"  # 作者
 
-# 文章
-title: "MSYS2 安装与配置"  # 文章标题
-url:  "posts/ps/docs/msys2"  # 设置网页永久链接
-tags: [ "windows terminal", "msys2", "config" ]  # 自定义标签
-series: [ "终端学习笔记" ]  # 文章主题/文章系列
-categories: [ "基础配置" ]  # 文章分类
+title: "MSYS2 安装与配置"
+url:  "posts/ps/docs/msys2"
+tags: [ "terminal", "msys2" ]
+categories: [ "终端学习笔记" ]
 
 # 章节
 weight: 20 # 文章在章节中的排序优先级，正序排序

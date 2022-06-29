@@ -2,13 +2,10 @@
 date: 2022-05-14T09:12:25+08:00  # 创建日期
 author: "Rustle Karl"  # 作者
 
-# 文章
-title: "WSL2 安装与配置"  # 文章标题
-# description: "文章描述"
-url:  "posts/ps/docs/wsl2"  # 设置网页永久链接
-tags: [ "windows terminal", "wsl2" ]  # 自定义标签
-series: [ "终端学习笔记" ]  # 文章主题/文章系列
-categories: [ "基础配置" ]  # 文章分类
+title: "WSL2 安装与配置"
+url:  "posts/ps/docs/wsl2"
+tags: [ "terminal", "wsl2" ]
+categories: [ "终端学习笔记" ]
 
 # 章节
 weight: 20 # 排序优先级

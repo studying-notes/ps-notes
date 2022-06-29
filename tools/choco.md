@@ -3,10 +3,9 @@ date: 2022-03-07T16:28:36+08:00
 author: "Rustle Karl"
 
 title: "Chocolatey 基本用法"
-url:  "posts/ps/tools/choco"  # 永久链接
-tags: [ "Terminal", "README" ]  # 标签
-series: [ "终端学习笔记" ]  # 系列
-categories: [ "学习笔记" ]  # 分类
+url:  "posts/ps/tools/choco"
+tags: [ "Terminal", "README" ]
+categories: [ "终端学习笔记" ]
 
 toc: true  # 目录
 draft: false  # 草稿

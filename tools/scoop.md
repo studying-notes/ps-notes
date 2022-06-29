@@ -3,10 +3,9 @@ date: 2022-03-09T19:41:36+08:00
 author: "Rustle Karl"
 
 title: "Scoop 基本用法"
-url:  "posts/ps/tools/scoop"  # 永久链接
-tags: [ "Terminal", "README" ]  # 标签
-series: [ "终端学习笔记" ]  # 系列
-categories: [ "学习笔记" ]  # 分类
+url:  "posts/ps/tools/scoop"
+tags: [ "Terminal", "README" ]
+categories: [ "终端学习笔记" ]
 
 toc: true  # 目录
 draft: false  # 草稿

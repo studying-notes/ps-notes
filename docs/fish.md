@@ -4,9 +4,8 @@ author: "Rustle Karl"
 
 title: "Fish Shell 安装与主题切换"
 url:  "posts/ps/docs/fish"  # 永久链接
-tags: [ "Linux" ]  # 标签
-series: [ "Linux 学习笔记" ]  # 系列
-categories: [ "学习笔记" ]  # 分类
+tags: [ "Linux" ]
+categories: [ "Linux 学习笔记" ]
 
 toc: true  # 目录
 draft: false  # 草稿

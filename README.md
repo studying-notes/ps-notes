@@ -6,9 +6,8 @@ author: "Rustle Karl"  # 作者
 title: "终端学习笔记"  # 文章标题
 description: "纸上得来终觉浅，学到过知识点分分钟忘得一干二净，今后无论学什么，都做好笔记吧。"
 url:  "posts/ps/README"  # 设置网页永久链接
-tags: [ "Powershell", "README" ]  # 标签
-series: [ "终端学习笔记" ]  # 系列
-categories: [ "学习笔记" ]  # 分类
+tags: [ "Powershell", "README" ]
+categories: [ "终端学习笔记" ]
 
 index: true  # 是否可以被索引
 toc: true  # 是否自动生成目录
@@ -23,7 +22,7 @@ draft: false  # 草稿
 
 - `assets/images`: 笔记配图
 - `assets/templates`: 笔记模板
-- `docs`: 基础语法
+- `docs`: 基础教程
 - `tools`: 常用工具
 - `quickstart`: 基础用法
 - `src`: 源码示例
